@@ -1,5 +1,10 @@
 # Wiring and firmware changes for motor current sensing
 
+> **Superseded by [LOADCELL_WIRING.md](LOADCELL_WIRING.md) and [MECHANICS_AND_CONTROL.md](MECHANICS_AND_CONTROL.md).**
+> The sample force is now measured with a FUTEK LSB200 load cell and an HX711, so the INA226 below is no
+> longer needed. The serial data format (`omega,I,d,F,u`) and the gain message
+> (`r,k_omega,k_I,k_d,k_F,k_int,mode`) have also changed. This file is kept for reference only.
+
 `ControlInterface4.py` now uses the 3-state model x = [ω, I, d]. It estimates
 Young's modulus from the motor current, so the motor current has to be measured
 and sent to the PC.
